@@ -3,76 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Journey in Tourism & Technology</title>
-    <link rel="stylesheet" href="css/blog-style.css">
+    <title>My Passion for Tourism & Technology</title>
+    <link rel="stylesheet" href="blog.css">
 </head>
 <body>
-
     <header>
-        <h1>How Tourism Inspires My Innovations in Technology</h1>
-        <p class="subtitle">Blending Passion with Innovation</p>
+        <h1>Exploring Tourism & Technology</h1>
+        <p>How My Passion for Tourism is Shaping Innovations</p>
     </header>
 
-    <section class="container">
-        <h2>🌍 A Passion for Tourism and Technology</h2>
-        <p>For as long as I can remember, I have been fascinated by the beauty of tourism—the way people explore new destinations, immerse themselves in different cultures, and experience the world in unique ways.</p>
-        <p>This passion has led me to create <strong>Kaizen Connect – Smart Tourism Management System</strong>, a web-based platform that enhances the travel experience by simplifying trip planning, bookings, and agency interactions.</p>
+    <section id="introduction">
+        <h2>My Passion for Tourism</h2>
+        <p>Tourism has been a deep passion of mine for a long time. The thrill of exploring new places, experiencing different cultures, and meeting people from around the world has always inspired me. Over time, I realized that technology plays a crucial role in transforming the tourism industry, making travel more accessible, efficient, and enjoyable.</p>
+        <p>With this in mind, I embarked on developing <strong>Kaizen Connect – Smart Tourism Management System</strong>, a project aimed at simplifying tourism services using modern technology.</p>
+    </section>
 
-        <h2>🚀 Innovations That Technology Can Bring to Tourism</h2>
+    <section id="tech-impact">
+        <h2>How Technology is Revolutionizing Tourism</h2>
+        <p>Technology has drastically changed how we explore the world. Some key innovations include:</p>
         <ul>
-            <li>AI-powered travel assistance</li>
-            <li>Smart booking systems</li>
-            <li>Virtual Reality (VR) travel experiences</li>
-            <li>Sustainable tourism solutions</li>
-        </ul>
-
-        <h2>🔨 How I’m Implementing These Ideas in Kaizen Connect</h2>
-        <p>Here are some of the key features integrated into the project:</p>
-
-        <h3>✅ Dynamic Destination Listings</h3>
-        <pre><code>
-fetch("http://localhost:3000/destinations")
-  .then(response => response.json())
-  .then(destinations => {
-    destinations.forEach(dest => {
-      document.querySelector("#destinations-list").innerHTML += `
-        <div class="destination">
-          <img src="${dest.image}" alt="${dest.name}">
-          <h3>${dest.name}</h3>
-          <p>${dest.description}</p>
-        </div>`;
-    });
-  });
-        </code></pre>
-
-        <h3>✅ Smart Booking System</h3>
-        <pre><code>
-document.querySelector("#booking-form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  let bookingData = {
-    customer: document.querySelector("#name").value,
-    destination: document.querySelector("#destination").value,
-    agency: document.querySelector("#agency").value,
-    date: document.querySelector("#date").value,
-    status: "Pending"
-  };
-  fetch("http://localhost:3000/bookings", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(bookingData)
-  }).then(() => alert("Booking Successful!"));
-});
-        </code></pre>
-
-        <h2>🌟 The Future of Smart Tourism</h2>
-        <p>With continued innovation, tourism will become more personalized, efficient, and accessible.</p>
-        <p>Some future improvements:</p>
-        <ul>
-            <li>AI-based recommendations for travel destinations</li>
-            <li>Blockchain-powered secure bookings</li>
-            <li>Augmented Reality (AR) navigation for tourists</li>
+            <li><strong>Online Booking Systems:</strong> Travelers can book flights, hotels, and tours with just a few clicks.</li>
+            <li><strong>AI & Chatbots:</strong> Virtual assistants help tourists find destinations, make reservations, and get recommendations.</li>
+            <li><strong>VR & AR Tours:</strong> Virtual reality allows people to explore destinations before visiting.</li>
+            <li><strong>Smart Tourism Apps:</strong> Apps provide real-time information about places, accommodations, and local events.</li>
         </ul>
     </section>
+
+    <section id="destinations">
+        <h2>Top Tourist Attractions in Africa</h2>
+        <div class="destination">
+            <img src="https://www.focuseastafricatours.com/wp-content/uploads/Serengeti-National-Park-1-1.jpg" alt="Serengeti National Park">
+            <h3>Serengeti National Park, Tanzania</h3>
+            <p>Famous for the Great Migration, this park offers breathtaking landscapes and incredible wildlife viewing.</p>
+        </div>
+        <div class="destination">
+            <img src="https://media.istockphoto.com/id/1081365424/photo/aerial-view-of-famous-victoria-falls-zimbabwe-and-zambia.jpg?s=612x612&w=0&k=20&c=-w7lj9taR2qyenSo_zjNQCacXZkXmKKhg0u7LjKpZqQ=" alt="Victoria Falls">
+            <h3>Victoria Falls, Zambia/Zimbabwe</h3>
+            <p>One of the world's largest waterfalls, known for its stunning beauty and adventure activities like bungee jumping.</p>
+        </div>
+        <div class="destination">
+            <img src="data:image/jpeg;base64,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" alt="The Pyramids of Giza">
+            <h3>The Pyramids of Giza, Egypt</h3>
+            <p>These ancient wonders attract millions of visitors every year, showcasing Egypt's rich history.</p>
+        </div>
+    </section>
+
+    <section id="comments">
+        <h2>What Travelers Say About Africa</h2>
+        <blockquote>
+            "Africa is a dream destination! The wildlife, the landscapes, and the people are truly amazing!" – <strong>@TravelLover</strong>
+        </blockquote>
+        <blockquote>
+            "The safari experience in Kenya was unforgettable. Seeing lions and elephants in their natural habitat was magical." – <strong>@ExplorerMike</strong>
+        </blockquote>
+        <blockquote>
+            "Climbing Mount Kilimanjaro was the most challenging yet rewarding experience of my life!" – <strong>@AdventureSeeker</strong>
+        </blockquote>
+    </section>
+
 
     <footer>
         <p>📌 <strong>GitHub:</strong> <a href="https://github.com/DerrickMwamburi" target="_blank">DerrickMwamburi</a></p>
